@@ -1,0 +1,7 @@
+min:
+    movq %RDI, %RAX
+    cmpq %RDI, %RSI
+    ja min_gt
+    movq %RSI, %RAX
+min_gt:
+    retq
