@@ -1,0 +1,13 @@
+pow:
+    movq $1, %RAX
+    cmpq $0, %RSI
+    jz ret_t
+cycle:
+    mulq %RDI
+    decq %RSI
+    cmpq $0, %RSI
+    jz ret_t
+    jmp cycle
+    
+ret_t:
+    retq
